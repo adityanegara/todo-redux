@@ -1,0 +1,41 @@
+@use './variables.scss'as *;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+@import url();
+
+body {
+
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $fontFamily;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+a {
+    min-width: 44px;
+    min-height: 44px;
+    cursor: pointer;
+}
+
+button {
+    min-width: 44px;
+    min-height: 44px;
+    cursor: pointer;
+}
+
+input {
+    min-width: 44px;
+    min-height: 44px;
+    cursor: pointer;
+}
+
+h1 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
