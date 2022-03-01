@@ -1,8 +1,9 @@
 @use '../../../variables.scss'as *;
 
 .todo {
-    background-color: $veryLightGray;
-    height: 100vh;
+    padding-bottom: 5vh;
+    background-color: #F4F4F6;
+    height: 100%;
     background-image: url('../../../Assets/Images/bg-mobile-light.jpg');
     background-repeat: no-repeat;
     background-size: 100vw 35vh;
@@ -13,5 +14,9 @@
 
     .todo-form__container {
         margin-top: 3vh;
+    }
+
+    .todo-sortby__container {
+        margin-top: 5vh;
     }
 }

@@ -1,0 +1,25 @@
+@use '../../../variables.scss'as *;
+
+.button-groups {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+
+    button {
+        border: 1px solid white;
+        background-color: transparent;
+        font-family: $fontFamily;
+        transition: ease-in 0.2s;
+        border-radius: 8px;
+    }
+
+    button:hover {
+        color: $brightBlue;
+        border: 1px solid $brightBlue;
+    }
+
+}
+
+.active {
+    color: $brightBlue !important;
+}

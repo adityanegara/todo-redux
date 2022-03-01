@@ -1,0 +1,39 @@
+@use '../../../variables.scss'as *;
+
+.todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0px;
+    padding: 10px;
+    background-color: white;
+    border-bottom: 3px solid #F4F4F6;
+
+
+
+    .todo-description {
+        margin-left: 5px;
+        width: 100%;
+    }
+
+    .todo-button {
+        border-radius: 10px;
+        background-color: transparent;
+        border: 1.5px solid white;
+        transition: ease-in 0.2s;
+    }
+
+    .todo-button:hover {
+        border: 1.5px solid #494C6B;
+    }
+}
+
+.todo-crossed {
+    text-decoration: line-through;
+    color: $darkGrayishBlue;
+}
+
+.todo:nth-child(1) {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}

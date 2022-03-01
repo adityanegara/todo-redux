@@ -3,6 +3,8 @@ import Header from '../../Molecules/Header/Header';
 import Container from '../../Atoms/Container/Container';
 import Card from '../../Atoms/Card/Card';
 import TodoForm from '../../Molecules/TodoForm/TodoForm';
+import TodoList from '../../Molecules/TodoList/TodoList';
+import SortBy from '../../Molecules/SortBy/SortBy';
 
 const Todo = () =>{
     return(
@@ -14,6 +16,12 @@ const Todo = () =>{
                         <Card>
                             <TodoForm/>
                         </Card>
+                    </div>
+                    <div className={styles['todo-list__container']}>
+                       <TodoList/>
+                    </div>
+                    <div className={styles['todo-sortby__container']}>
+                        <SortBy/>
                     </div>
                 </Container>
             </div>

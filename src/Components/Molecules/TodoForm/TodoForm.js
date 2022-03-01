@@ -6,9 +6,9 @@ import CreateButton from '../../Atoms/CreateButton/CreateButton';
 const TodoForm = () =>{
     return(
         <form className={styles['todo-form']}>
-            <div className={styles['checkbox-container']}>
+   
                <Checkbox/>
-            </div>
+            
             <Input type={"text"} placeholder={"Create a new todo..."} name={"todo"}/>
             <CreateButton text={"+"} ariaLabel="Create ToDo"/>
         </form>

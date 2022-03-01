@@ -1,5 +1,14 @@
 @use '../../../variables.scss'as *;
 
+
+.checkbox-container {
+
+    width: fit-content;
+    position: relative;
+    left: 5px;
+    bottom: 2px;
+}
+
 .container {
     position: relative;
     padding-left: 35px;
