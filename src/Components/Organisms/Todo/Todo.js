@@ -1,12 +1,21 @@
 import styles from './Todo.module.scss';
-import nightIcon from '../../../Assets/Icons/icon-moon.svg'
 import Header from '../../Molecules/Header/Header';
+import Container from '../../Atoms/Container/Container';
+import Card from '../../Atoms/Card/Card';
+import TodoForm from '../../Molecules/TodoForm/TodoForm';
 
 const Todo = () =>{
     return(
         <div className={styles['todo']}>
             <div className={styles['todo-content']}>
-                <Header />
+                <Container>
+                    <Header />
+                    <div className={styles['todo-form__container']}>
+                        <Card>
+                            <TodoForm/>
+                        </Card>
+                    </div>
+                </Container>
             </div>
         </div>
     )

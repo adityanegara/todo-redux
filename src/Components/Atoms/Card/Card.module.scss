@@ -1,0 +1,7 @@
+@use '../../../variables.scss'as *;
+
+.card {
+    border-radius: 8px;
+    padding: 10px;
+    background-color: $veryLightGray;
+}

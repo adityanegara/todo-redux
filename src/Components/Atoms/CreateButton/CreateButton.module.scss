@@ -1,0 +1,17 @@
+@use '../.././../variables.scss'as *;
+
+.create-button {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 2em;
+    border-radius: 8px;
+    font-family: $fontFamily;
+    color: white;
+    border: none;
+    background-color: $brightBlue;
+    transition: ease-in 0.2s;
+}
+
+.create-button:hover {
+    background-color: $brightBlueHover;
+}
