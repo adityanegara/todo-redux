@@ -23,6 +23,7 @@ const Todo = () =>{
                     <div className={styles['todo-sortby__container']}>
                         <SortBy/>
                     </div>
+                    <p className={styles['information-text']}>Drag and drop to reorder list</p>
                 </Container>
             </div>
         </div>

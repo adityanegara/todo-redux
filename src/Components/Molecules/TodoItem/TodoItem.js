@@ -1,14 +1,14 @@
-import styles from './Todo.module.scss';
+import styles from './TodoItem.module.scss';
 import clsx from 'clsx';
 import Checkbox from '../../Atoms/Checkbox/Checkbox';
 import cancelIcon from '../../../Assets/Icons/icon-cross.svg';
 
-const Todo = ({todo}) =>{
+const TodoItem = ({todo, key}) =>{
     const renderFinish = (isFinish) =>{
         return isFinish ? styles['todo-crossed'] : '';
     }
     return(
-        <div className={styles['todo']}>
+        <div key={key} className={styles['todo']}>
         <Checkbox/>
         <div className={clsx(styles['todo-description'], renderFinish(todo.isFinish))}>
             <p>{todo.description}</p>
@@ -20,4 +20,4 @@ const Todo = ({todo}) =>{
     )
 }
 
-export default Todo;
+export default TodoItem;
