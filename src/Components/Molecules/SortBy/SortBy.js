@@ -1,10 +1,14 @@
 import styles from './SortBy.module.scss';
 import Card from '../../Atoms/Card/Card';
 import clsx from 'clsx';
+import useMediaQuery from '../../../Hooks/useMediaQueries';
 
 const SortBy = () =>{
-    return(
-        <div className={styles['sort-by']}>
+    const isDesktop = useMediaQuery('(min-width: 600px)');
+    const renderSortBy = (isDesktop) =>{
+        if(isDesktop !== true){
+            return(
+                <div className={styles['sort-by']}>
             <Card>
                 <div className={styles['button-groups']}>
                     <button className={clsx(styles['active'])}>
@@ -18,6 +22,19 @@ const SortBy = () =>{
                     </button>
                 </div>
             </Card>
+        </div>
+            )
+            
+        }else{
+            return(
+                <>
+                </>
+            )
+        }
+    }
+    return(
+        <div className={styles['sort-by']}>
+           {renderSortBy(isDesktop)}
         </div>
     )
 }
