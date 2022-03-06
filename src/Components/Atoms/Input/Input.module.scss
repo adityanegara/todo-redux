@@ -1,6 +1,7 @@
 @use '../.././../variables.scss'as *;
 
 .input {
+    background-color: #FAFAFA;
     font-family: $fontFamily;
     width: 100% !important;
     height: 100%;
@@ -10,5 +11,6 @@
 
 
 .input:focus {
+    background-color: transparent;
     outline: none;
 }

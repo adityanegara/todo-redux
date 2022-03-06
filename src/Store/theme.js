@@ -22,5 +22,5 @@ export default themeSlice.reducer;
 //selector
 export const getTheme = createSelector(
     state => state.entities.theme,
-    (theme) => theme
+    (theme) => theme.isThemeDark
 )

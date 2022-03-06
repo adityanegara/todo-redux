@@ -3,6 +3,7 @@
 .todo {
     padding-bottom: 5vh;
     background-color: #F4F4F6;
+    min-height: 100vh;
     height: 100%;
     background-image: url('../../../Assets/Images/bg-mobile-light.jpg');
     background-repeat: no-repeat;
@@ -30,11 +31,7 @@
 
 @media only screen and (min-width: 600px) {
     .todo {
-        padding-bottom: 5vh;
-        background-color: #F4F4F6;
-        height: 100%;
         background-image: url('../../../Assets/Images/bg-desktop-light.jpg');
-        background-repeat: no-repeat;
-        background-size: 100vw 45vh;
+        background-size: 100vw 35vh;
     }
 }
