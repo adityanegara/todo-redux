@@ -1,25 +1,51 @@
 @use '../../../variables.scss'as *;
 
 .button-groups {
+    transition: ease-in 0.2s;
+    border-radius: 8px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     gap: 5px;
 
     button {
-        border: 1px solid white;
         background-color: transparent;
         font-family: $fontFamily;
         transition: ease-in 0.2s;
         border-radius: 8px;
     }
 
-    button:hover {
-        color: $brightBlue;
-        border: 1px solid $brightBlue;
-    }
+
 
 }
 
 .active {
     color: $brightBlue !important;
+}
+
+.button-groups__light {
+    background-color: white;
+}
+
+.button-groups__dark {
+    background-color: #25273C;
+}
+
+.sortby-button__light {
+    border: 1.5px solid white;
+}
+
+.sortby-button__dark {
+    color: $inputColorDark;
+    border: 1.5px solid $darkCardTheme;
+}
+
+.sortby-button__light:hover {
+    border: 1.5px solid #494C6B;
+}
+
+
+.sortby-button__dark:hover {
+    border: 1.5px solid #464970;
+    ;
 }

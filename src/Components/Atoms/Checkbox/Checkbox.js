@@ -1,5 +1,6 @@
 import styles from './Checkbox.module.scss';
 
+
 const Checkbox = ({value, setValue}) =>{
     return(
         <div className={styles['checkbox-container']}>

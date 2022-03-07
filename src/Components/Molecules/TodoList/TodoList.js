@@ -26,9 +26,9 @@ const TodoList = () =>{
     const renderTodoList = (todoList) =>{
         return todoList.map((todo) => {
             return(
-            <div key={todo.id}>
+            
                 <TodoItem todo={todo}/>
-            </div>
+    
             )
         })
     }

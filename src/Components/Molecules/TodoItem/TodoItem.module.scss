@@ -6,10 +6,7 @@
     justify-content: space-between;
     border-radius: 0px;
     padding: 10px;
-    background-color: white;
-    border-bottom: 3px solid #F4F4F6;
-
-
+    transition: ease-in 0.2s;
 
     .todo-description {
 
@@ -21,12 +18,7 @@
     .todo-button {
         border-radius: 10px;
         background-color: transparent;
-        border: 1.5px solid white;
         transition: ease-in 0.2s;
-    }
-
-    .todo-button:hover {
-        border: 1.5px solid #494C6B;
     }
 }
 
@@ -38,4 +30,34 @@
 .todo:nth-child(1) {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+}
+
+.todo-item__light {
+    background-color: white;
+    border-bottom: 3px solid #F4F4F6;
+    color: black;
+}
+
+.todo-item__dark {
+    background-color: $darkCardTheme;
+    border-bottom: 3px solid #181824;
+    color: $inputColorDark;
+}
+
+.todo-button__light {
+    border: 1.5px solid white;
+}
+
+.todo-button__dark {
+    border: 1.5px solid $darkCardTheme;
+}
+
+.todo-button__light:hover {
+    border: 1.5px solid #494C6B;
+}
+
+
+.todo-button__dark:hover {
+    border: 1.5px solid #464970;
+    ;
 }

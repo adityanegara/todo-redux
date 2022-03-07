@@ -3,9 +3,7 @@
 .todo-summary {
     border-radius: 0px;
     padding: 10px;
-    background-color: white;
-    border-bottom: 3px solid #F4F4F6;
-    color: $darkGrayishBlue;
+    transition: ease-in 0.2s;
 
     .todo-summary__content {
         width: 95%;
@@ -22,16 +20,43 @@
 
         button {
             background-color: transparent;
-
             font-family: $fontFamily;
             border-radius: 8px;
-            border: 1.5px solid white;
             transition: ease-in 0.2s;
-        }
-
-        button:hover {
-            border: 1.5px solid #494C6B;
         }
     }
 
+}
+
+.button-light {
+    color: $inputColorLight;
+    border: 1.5px solid white;
+}
+
+.button-light:hover {
+    border: 1.5px solid #494C6B;
+}
+
+.button-dark {
+    color: $inputColorDark;
+    border: 1.5px solid $darkCardTheme;
+}
+
+.button-dark:hover {
+    border: 1.5px solid #464970;
+    ;
+}
+
+.todo-summary__light {
+    background-color: white;
+    color: $darkGrayishBlue;
+}
+
+.todo-summary__dark {
+    background-color: $darkCardTheme;
+    color: $inputColorDark;
+}
+
+.active {
+    color: $brightBlue !important;
 }

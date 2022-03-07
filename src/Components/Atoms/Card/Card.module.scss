@@ -3,5 +3,13 @@
 .card {
     border-radius: 8px;
     padding: 10px;
-    background-color: $veryLightGray;
+    transition: ease-in 0.2s;
+}
+
+.light {
+    background-color: $lightCardTheme;
+}
+
+.dark {
+    background-color: $darkCardTheme;
 }
