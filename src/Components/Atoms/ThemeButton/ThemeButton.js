@@ -26,7 +26,7 @@ const ThemeButton = () =>{
     }
     return(
         <button onClick={()=>{handleThemeButtonClicked(theme)}} className={styles['theme-button']} aria-label='Change Theme'>
-            <img  src={renderIcon(theme)}/>
+            <img alt='theme' src={renderIcon(theme)}/>
         </button>
     )
 }
