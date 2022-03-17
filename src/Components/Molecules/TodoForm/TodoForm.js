@@ -16,6 +16,8 @@ const TodoForm = () =>{
             isFinish: isFinish,
             description: description
         }))
+        setIsFinish(false);
+        setDescription('');
     } 
     return(
         <form onSubmit={(e)=>{handleSubmit(e, isFinish, description)}} className={styles['todo-form']}>

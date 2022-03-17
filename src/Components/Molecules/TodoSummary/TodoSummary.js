@@ -1,7 +1,7 @@
 import styles from './TodoSummary.module.scss';
 import useMediaQuery from '../../../Hooks/useMediaQueries';
 import { useDispatch } from 'react-redux';
-import { filterFinished, getTodos} from '../../../Store/todos';
+import { filterFinished, getTodos, getUnfinishTodos, getFinishTodos} from '../../../Store/todos';
 import {getTheme} from '../../../Store/theme';
 import { useSelector} from 'react-redux';
 import { getSortBy, sortByChangedToActive, sortByChangedToAll, sortByChangedToCompleted} from '../../../Store/sortBy';
@@ -12,7 +12,20 @@ const TodoSummary = () =>{
     const sortBy = useSelector(getSortBy)
     const theme = useSelector(getTheme);
     const isDesktop = useMediaQuery('(min-width: 800px)');
+    const todos = useSelector(getTodos);
+    const unfinishedTodos = useSelector(getUnfinishTodos);
+    const finishedTodos = useSelector(getFinishTodos)
 
+    const getLength = (sortBy) =>{
+        if(sortBy === 'all'){
+            return todos.length;
+        }
+        else if(sortBy === 'active'){
+            return unfinishedTodos.length;
+        }else if(sortBy === 'completed'){
+           return finishedTodos.length;
+        }
+    }
     const renderTheme = (isThemeDark) =>{
         if(isThemeDark){
             return {
@@ -68,7 +81,7 @@ const TodoSummary = () =>{
     return(
         <div className={clsx(styles['todo-summary'], renderTheme(theme).todoSummary)}>
             <div className={styles['todo-summary__content']}>
-                <p>{`${useSelector(getTodos).length} items left`}</p>
+                <p>{`${getLength(sortBy)} items left`}</p>
                 {renderSortBy(isDesktop)}
                 <div className={styles['button-group']}>
                     <button className={renderTheme(theme).button} onClick={handleClearCompletedClicked}>
